@@ -1,0 +1,142 @@
+{
+	"name": "AzureSqlDatabaseSinkDataset",
+	"properties": {
+		"description": "Connection to your destination data store.",
+		"linkedServiceName": {
+			"referenceName": "OutputSQL",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sinkTableName": {
+				"type": "string",
+				"defaultValue": "DWH_FORWARD_POSITION_LEG_2"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "FRWD_POSN_LEG_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "POSN_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CURR_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RFWD_POSN_LEG_TYPE_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "POSN_LEG_AMT_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "POSN_LEG_MKT_VAL_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "FT_INITIATED_TRAN_IND",
+				"type": "decimal",
+				"precision": 1,
+				"scale": 0
+			},
+			{
+				"name": "CNTRCT_LEG_TO_BASE_FX_RATE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 10
+			},
+			{
+				"name": "CURR_LEG_TO_BASE_FX_RATE",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 10
+			},
+			{
+				"name": "WHO_CREATED",
+				"type": "varchar"
+			},
+			{
+				"name": "WHEN_CREATED",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "WHO_UPDATED",
+				"type": "varchar"
+			},
+			{
+				"name": "WHEN_UPDATED",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "WHO_DELETED",
+				"type": "varchar"
+			},
+			{
+				"name": "WHEN_DELETED",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "PERCENT_TOTAL_PORTFOLIO",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "CURR_CD",
+				"type": "char"
+			},
+			{
+				"name": "CURR_DESC",
+				"type": "varchar"
+			},
+			{
+				"name": "RFWD_POSN_LEG_TYPE_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "RFWD_POSN_LEG_TYPE_CD_DESC",
+				"type": "varchar"
+			},
+			{
+				"name": "UNREALIZED_GL_AMOUNT_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 2
+			},
+			{
+				"name": "POSN_LEG_CURR_BOOK_VAL_BASE",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "POSN_LEG_MRKT_PRICE_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DWH_FORWARD_POSITION_LEG_TEST"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

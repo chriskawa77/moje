@@ -1,0 +1,18 @@
+{
+	"name": "MOJ",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/filesystem/blobs/to_load/plik",
+			"blobPathEndsWith": ".txt",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/ec8515af-7843-4d76-8eec-6e339c1b926b/resourceGroups/MyResourceGroup19771230/providers/Microsoft.Storage/storageAccounts/adl2chris",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

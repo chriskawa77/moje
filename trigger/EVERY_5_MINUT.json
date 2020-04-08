@@ -1,0 +1,32 @@
+{
+	"name": "EVERY_5_MINUT",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "POSITIONS_FINAL",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"SourceContainer": "filesystem",
+					"SourceDirectory": "to_load",
+					"SourceStore_Location": "filesystem",
+					"SourceStore_Directory": "to_load",
+					"DestinationStore_Location": "filesystem",
+					"DestinationStore_Directory": "loaded"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 5,
+				"startTime": "2020-03-30T13:31:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

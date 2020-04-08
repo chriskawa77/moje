@@ -1,0 +1,118 @@
+{
+	"name": "POS_FRD_LEG_FROM_DATALAKE_2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1ADL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "*",
+				"folderPath": "to_load",
+				"container": "filesystem"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": ""
+		},
+		"schema": [
+			{
+				"name": "FRWD_POSN_LEG_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "POSN_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "CURR_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "RFWD_POSN_LEG_TYPE_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "POSN_LEG_AMT_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "POSN_LEG_MKT_VAL_BASE",
+				"type": "String"
+			},
+			{
+				"name": "FT_INITIATED_TRAN_IND",
+				"type": "String"
+			},
+			{
+				"name": "CNTRCT_LEG_TO_BASE_FX_RATE",
+				"type": "String"
+			},
+			{
+				"name": "CURR_LEG_TO_BASE_FX_RATE",
+				"type": "String"
+			},
+			{
+				"name": "WHO_CREATED",
+				"type": "String"
+			},
+			{
+				"name": "WHEN_CREATED",
+				"type": "String"
+			},
+			{
+				"name": "WHO_UPDATED",
+				"type": "String"
+			},
+			{
+				"name": "WHEN_UPDATED",
+				"type": "String"
+			},
+			{
+				"name": "WHO_DELETED",
+				"type": "String"
+			},
+			{
+				"name": "WHEN_DELETED",
+				"type": "String"
+			},
+			{
+				"name": "PERCENT_TOTAL_PORTFOLIO",
+				"type": "String"
+			},
+			{
+				"name": "CURR_CD",
+				"type": "String"
+			},
+			{
+				"name": "CURR_DESC",
+				"type": "String"
+			},
+			{
+				"name": "RFWD_POSN_LEG_TYPE_CD",
+				"type": "String"
+			},
+			{
+				"name": "RFWD_POSN_LEG_TYPE_CD_DESC",
+				"type": "String"
+			},
+			{
+				"name": "UNREALIZED_GL_AMOUNT_BASE",
+				"type": "String"
+			},
+			{
+				"name": "POSN_LEG_CURR_BOOK_VAL_BASE",
+				"type": "String"
+			},
+			{
+				"name": "POSN_LEG_MRKT_PRICE_LOCAL",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

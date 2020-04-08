@@ -1,0 +1,541 @@
+{
+	"name": "POS_FROM_DATALAKE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1ADL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "DWH_POSITIONS.txt",
+				"container": "input"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": ""
+		},
+		"schema": [
+			{
+				"name": "POSN_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "POSN_BATCH_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "INST_ISS_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "POSITION_CURRENCY_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "POSITION_CURR_CODE",
+				"type": "String"
+			},
+			{
+				"name": "POSITION_CURR_DESC",
+				"type": "String"
+			},
+			{
+				"name": "PORT_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "ACCT_ID",
+				"type": "String"
+			},
+			{
+				"name": "PORTFOLIO_ID",
+				"type": "String"
+			},
+			{
+				"name": "PORTFOLIO_NAME",
+				"type": "String"
+			},
+			{
+				"name": "RPOS_BAS_TYP_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "RPOS_BAS_TYP_CD",
+				"type": "String"
+			},
+			{
+				"name": "RPOS_BAS_TYP_CD_DESC",
+				"type": "String"
+			},
+			{
+				"name": "RPOS_VAL_PNT_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "POS_RPOS_VAL_PNT_CD",
+				"type": "String"
+			},
+			{
+				"name": "POS_RPOS_VAL_PNT_CD_DESC",
+				"type": "String"
+			},
+			{
+				"name": "MKT_PRICE_PER_UNIT",
+				"type": "String"
+			},
+			{
+				"name": "POSN_QTY",
+				"type": "String"
+			},
+			{
+				"name": "MARKET_VALUE_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "MARKET_VALUE_BASE",
+				"type": "String"
+			},
+			{
+				"name": "ACCRUED_INT_MKT_VALUE_BASE",
+				"type": "String"
+			},
+			{
+				"name": "ACCRUED_INT_MKT_VALUE_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "ACCRUED_INCOME_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "ACCRUED_INCOME_BASE",
+				"type": "String"
+			},
+			{
+				"name": "ORIG_FACE_VAL",
+				"type": "String"
+			},
+			{
+				"name": "AVG_UNIT_COST_BASE",
+				"type": "String"
+			},
+			{
+				"name": "AVG_UNIT_COST_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "LONG_SHORT_FLG",
+				"type": "String"
+			},
+			{
+				"name": "UNREALIZED_GL_AMOUNT_BASE",
+				"type": "String"
+			},
+			{
+				"name": "OUTSTANDING_NOTIONAL_AMOUNT",
+				"type": "String"
+			},
+			{
+				"name": "NOTIONAL_COST_BASE",
+				"type": "String"
+			},
+			{
+				"name": "NOTIONAL_COST_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "WHO_CREATED",
+				"type": "String"
+			},
+			{
+				"name": "WHEN_CREATED",
+				"type": "String"
+			},
+			{
+				"name": "WHO_UPDATED",
+				"type": "String"
+			},
+			{
+				"name": "WHEN_UPDATED",
+				"type": "String"
+			},
+			{
+				"name": "WHO_DELETED",
+				"type": "String"
+			},
+			{
+				"name": "WHEN_DELETED",
+				"type": "String"
+			},
+			{
+				"name": "ACCR_INT_CURR_BASE",
+				"type": "String"
+			},
+			{
+				"name": "AMORT_BASE",
+				"type": "String"
+			},
+			{
+				"name": "AMORT_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "ANNUAL_INCOME_BASE",
+				"type": "String"
+			},
+			{
+				"name": "ANNUAL_INCOME_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "AS_OF_DATE",
+				"type": "String"
+			},
+			{
+				"name": "ASOFDATE_RESTATMENT_DATE",
+				"type": "String"
+			},
+			{
+				"name": "BOOK_VAL_ACCR_INT_BASE",
+				"type": "String"
+			},
+			{
+				"name": "BOOK_VAL_ACCR_INT_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "BOOK_VAL_BASE",
+				"type": "String"
+			},
+			{
+				"name": "BOOK_VALUE_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "CCY_FRWD_STLMNT_DATE",
+				"type": "String"
+			},
+			{
+				"name": "CNTRCT_FX_RATE",
+				"type": "String"
+			},
+			{
+				"name": "CURR_FACE_VAL",
+				"type": "String"
+			},
+			{
+				"name": "CURR_FX_RATE_PER_CNTRCT",
+				"type": "String"
+			},
+			{
+				"name": "DAILY_INT_ACCRUED_AMT_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "DAILY_INT_ACCRUED_AMT_BASE",
+				"type": "String"
+			},
+			{
+				"name": "DURATION_YEARS",
+				"type": "String"
+			},
+			{
+				"name": "EXEC_BROKER_CD",
+				"type": "String"
+			},
+			{
+				"name": "FX_RATE_HLDG",
+				"type": "String"
+			},
+			{
+				"name": "MODFY_DUR_YEAR",
+				"type": "String"
+			},
+			{
+				"name": "MARKET_PRICE_BASE",
+				"type": "String"
+			},
+			{
+				"name": "MRKT_PRICE_LOC",
+				"type": "String"
+			},
+			{
+				"name": "MTM_ADJUST_BOOK_VAL_BASE",
+				"type": "String"
+			},
+			{
+				"name": "NOTNL_MKT_VAL_BASE",
+				"type": "String"
+			},
+			{
+				"name": "NOTNL_MKT_VAL_LOC",
+				"type": "String"
+			},
+			{
+				"name": "OLDEST_ACTY_DATE",
+				"type": "String"
+			},
+			{
+				"name": "ORIG_COST_BASE",
+				"type": "String"
+			},
+			{
+				"name": "ORIG_COST_LOC",
+				"type": "String"
+			},
+			{
+				"name": "ORIG_UNIT_COST_BASE",
+				"type": "String"
+			},
+			{
+				"name": "ORIG_UNIT_COST_LOC",
+				"type": "String"
+			},
+			{
+				"name": "PRICE_DATE",
+				"type": "String"
+			},
+			{
+				"name": "RINCOME_PRINCIPLE_CODE_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "RINCOME_PRINCIPLE_CD",
+				"type": "String"
+			},
+			{
+				"name": "RINCOME_PRINCIPLE_CD_DESC",
+				"type": "String"
+			},
+			{
+				"name": "RPOS_SUP_TYP_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "RPOS_SUP_TYP_CD",
+				"type": "String"
+			},
+			{
+				"name": "RPOS_SUP_TYP_CD_DESC",
+				"type": "String"
+			},
+			{
+				"name": "RPOS_TYP_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "RPOS_TYP_CD",
+				"type": "String"
+			},
+			{
+				"name": "RPOS_TYP_CD_DESC",
+				"type": "String"
+			},
+			{
+				"name": "SRCE_SYST_CONTROL_DATE",
+				"type": "String"
+			},
+			{
+				"name": "SRCE_SYST_CONTROL_TIME",
+				"type": "String"
+			},
+			{
+				"name": "SRCE_TRADE_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "UNIT_BOOK_VAL_BASE",
+				"type": "String"
+			},
+			{
+				"name": "UNIT_BOOK_VAL_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "UNREALIZED_GL_AMOUNT_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "YIELD_MATURITY_PCT",
+				"type": "String"
+			},
+			{
+				"name": "YIELD_MOST_LIKELY",
+				"type": "String"
+			},
+			{
+				"name": "YIELD_NEXT_CALL",
+				"type": "String"
+			},
+			{
+				"name": "YIELD_ON_COST",
+				"type": "String"
+			},
+			{
+				"name": "YIELD_WORST",
+				"type": "String"
+			},
+			{
+				"name": "CCY_FRWD_TRADE_DATE",
+				"type": "String"
+			},
+			{
+				"name": "BOOK_VAL_BASE_ADJ",
+				"type": "String"
+			},
+			{
+				"name": "BOOK_VAL_LOCAL_ADJ",
+				"type": "String"
+			},
+			{
+				"name": "POSN_QTY_ADJ",
+				"type": "String"
+			},
+			{
+				"name": "PERCENT_PORT",
+				"type": "String"
+			},
+			{
+				"name": "LAST_TRADE_DATE",
+				"type": "String"
+			},
+			{
+				"name": "UNREALIZED_GL_CCY_MOVEMENT",
+				"type": "String"
+			},
+			{
+				"name": "CCY_RATE",
+				"type": "String"
+			},
+			{
+				"name": "FRWD_CNTRCT_CROSS_CCY_FX_RATE",
+				"type": "String"
+			},
+			{
+				"name": "RESTATEMENT_VERSION_NO",
+				"type": "String"
+			},
+			{
+				"name": "ACCOUNTING_NEXT_CALL_DATE",
+				"type": "String"
+			},
+			{
+				"name": "SRCE_TRADE_IDENTIFIER",
+				"type": "String"
+			},
+			{
+				"name": "SECURITY_MASTER_ID",
+				"type": "String"
+			},
+			{
+				"name": "CNTRCT_NET_GAIN_LOSS",
+				"type": "String"
+			},
+			{
+				"name": "DURATION_CALL_MAT_YEARS",
+				"type": "String"
+			},
+			{
+				"name": "DURATION_NEXT_CALL_YEARS",
+				"type": "String"
+			},
+			{
+				"name": "CURR_YIELD",
+				"type": "String"
+			},
+			{
+				"name": "CURR_BOOK_VAL_BASE",
+				"type": "String"
+			},
+			{
+				"name": "POS_BAT_RPOS_VAL_PNT_CD",
+				"type": "String"
+			},
+			{
+				"name": "POS_BAT_RPOS_VAL_PNT_CD_DESC",
+				"type": "String"
+			},
+			{
+				"name": "POS_BAT_RPOS_BAS_TYP_CD",
+				"type": "String"
+			},
+			{
+				"name": "POS_BAT_RPOS_BAS_TYP_CD_DESC",
+				"type": "String"
+			},
+			{
+				"name": "YEARS_TO_MATURITY",
+				"type": "String"
+			},
+			{
+				"name": "PFC_START_DATETIME",
+				"type": "String"
+			},
+			{
+				"name": "CONTRACT_ID",
+				"type": "String"
+			},
+			{
+				"name": "MULTIPL_CPA_IND",
+				"type": "String"
+			},
+			{
+				"name": "MULTIPL_COUNTERPARTY_IND",
+				"type": "String"
+			},
+			{
+				"name": "CPA_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "SRCE_CPA_ID",
+				"type": "String"
+			},
+			{
+				"name": "CP_LEGE_SYS_NO",
+				"type": "String"
+			},
+			{
+				"name": "LE_IDENTIFIER_CD",
+				"type": "String"
+			},
+			{
+				"name": "PAYABLE_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "PAYABLE_BASE",
+				"type": "String"
+			},
+			{
+				"name": "RECEIVABLE_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "RECEIVABLE_BASE",
+				"type": "String"
+			},
+			{
+				"name": "ACTUAL_SETTLED_LOCAL",
+				"type": "String"
+			},
+			{
+				"name": "ACTUAL_SETTLED_BASE",
+				"type": "String"
+			},
+			{
+				"name": "CONTRCT_SETTLED_LOCL",
+				"type": "String"
+			},
+			{
+				"name": "CONTRCT_SETTLED_BASE",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

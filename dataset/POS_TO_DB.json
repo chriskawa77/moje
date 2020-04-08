@@ -1,0 +1,706 @@
+{
+	"name": "POS_TO_DB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OutputSQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "POSN_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "POSN_BATCH_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INST_ISS_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "POSITION_CURRENCY_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "POSITION_CURR_CODE",
+				"type": "char"
+			},
+			{
+				"name": "POSITION_CURR_DESC",
+				"type": "varchar"
+			},
+			{
+				"name": "PORT_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCT_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "PORTFOLIO_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "PORTFOLIO_NAME",
+				"type": "varchar"
+			},
+			{
+				"name": "RPOS_BAS_TYP_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RPOS_BAS_TYP_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "RPOS_BAS_TYP_CD_DESC",
+				"type": "varchar"
+			},
+			{
+				"name": "RPOS_VAL_PNT_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "POS_RPOS_VAL_PNT_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "POS_RPOS_VAL_PNT_CD_DESC",
+				"type": "varchar"
+			},
+			{
+				"name": "MKT_PRICE_PER_UNIT",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "POSN_QTY",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 3
+			},
+			{
+				"name": "MARKET_VALUE_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "MARKET_VALUE_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "ACCRUED_INT_MKT_VALUE_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "ACCRUED_INT_MKT_VALUE_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "ACCRUED_INCOME_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "ACCRUED_INCOME_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "ORIG_FACE_VAL",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "AVG_UNIT_COST_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "AVG_UNIT_COST_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "LONG_SHORT_FLG",
+				"type": "char"
+			},
+			{
+				"name": "UNREALIZED_GL_AMOUNT_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "OUTSTANDING_NOTIONAL_AMOUNT",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "NOTIONAL_COST_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "NOTIONAL_COST_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "WHO_CREATED",
+				"type": "varchar"
+			},
+			{
+				"name": "WHEN_CREATED",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "WHO_UPDATED",
+				"type": "varchar"
+			},
+			{
+				"name": "WHEN_UPDATED",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "WHO_DELETED",
+				"type": "varchar"
+			},
+			{
+				"name": "WHEN_DELETED",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "ACCR_INT_CURR_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "AMORT_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "AMORT_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "ANNUAL_INCOME_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "ANNUAL_INCOME_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "AS_OF_DATE",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "ASOFDATE_RESTATMENT_DATE",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "BOOK_VAL_ACCR_INT_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "BOOK_VAL_ACCR_INT_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "BOOK_VAL_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "BOOK_VALUE_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "CCY_FRWD_STLMNT_DATE",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "CNTRCT_FX_RATE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 10
+			},
+			{
+				"name": "CURR_FACE_VAL",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "CURR_FX_RATE_PER_CNTRCT",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 10
+			},
+			{
+				"name": "DAILY_INT_ACCRUED_AMT_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "DAILY_INT_ACCRUED_AMT_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "DURATION_YEARS",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 9
+			},
+			{
+				"name": "EXEC_BROKER_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "FX_RATE_HLDG",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 10
+			},
+			{
+				"name": "MODFY_DUR_YEAR",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 10
+			},
+			{
+				"name": "MARKET_PRICE_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 10
+			},
+			{
+				"name": "MRKT_PRICE_LOC",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 10
+			},
+			{
+				"name": "MTM_ADJUST_BOOK_VAL_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "NOTNL_MKT_VAL_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "NOTNL_MKT_VAL_LOC",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "OLDEST_ACTY_DATE",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "ORIG_COST_BASE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 6
+			},
+			{
+				"name": "ORIG_COST_LOC",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 10
+			},
+			{
+				"name": "ORIG_UNIT_COST_BASE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 10
+			},
+			{
+				"name": "ORIG_UNIT_COST_LOC",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 10
+			},
+			{
+				"name": "PRICE_DATE",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "RINCOME_PRINCIPLE_CODE_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RINCOME_PRINCIPLE_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "RINCOME_PRINCIPLE_CD_DESC",
+				"type": "varchar"
+			},
+			{
+				"name": "RPOS_SUP_TYP_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RPOS_SUP_TYP_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "RPOS_SUP_TYP_CD_DESC",
+				"type": "varchar"
+			},
+			{
+				"name": "RPOS_TYP_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RPOS_TYP_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "RPOS_TYP_CD_DESC",
+				"type": "varchar"
+			},
+			{
+				"name": "SRCE_SYST_CONTROL_DATE",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "SRCE_SYST_CONTROL_TIME",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "SRCE_TRADE_SYS_NO",
+				"type": "varchar"
+			},
+			{
+				"name": "UNIT_BOOK_VAL_BASE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 10
+			},
+			{
+				"name": "UNIT_BOOK_VAL_LOCAL",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 10
+			},
+			{
+				"name": "UNREALIZED_GL_AMOUNT_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "YIELD_MATURITY_PCT",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "YIELD_MOST_LIKELY",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "YIELD_NEXT_CALL",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "YIELD_ON_COST",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "YIELD_WORST",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "CCY_FRWD_TRADE_DATE",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "BOOK_VAL_BASE_ADJ",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "BOOK_VAL_LOCAL_ADJ",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "POSN_QTY_ADJ",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "PERCENT_PORT",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "LAST_TRADE_DATE",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "UNREALIZED_GL_CCY_MOVEMENT",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "CCY_RATE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 10
+			},
+			{
+				"name": "FRWD_CNTRCT_CROSS_CCY_FX_RATE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 9
+			},
+			{
+				"name": "RESTATEMENT_VERSION_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCOUNTING_NEXT_CALL_DATE",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "SRCE_TRADE_IDENTIFIER",
+				"type": "varchar"
+			},
+			{
+				"name": "SECURITY_MASTER_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "CNTRCT_NET_GAIN_LOSS",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "DURATION_CALL_MAT_YEARS",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 10
+			},
+			{
+				"name": "DURATION_NEXT_CALL_YEARS",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 10
+			},
+			{
+				"name": "CURR_YIELD",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "CURR_BOOK_VAL_BASE",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "POS_BAT_RPOS_VAL_PNT_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "POS_BAT_RPOS_VAL_PNT_CD_DESC",
+				"type": "varchar"
+			},
+			{
+				"name": "POS_BAT_RPOS_BAS_TYP_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "POS_BAT_RPOS_BAS_TYP_CD_DESC",
+				"type": "varchar"
+			},
+			{
+				"name": "YEARS_TO_MATURITY",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 10
+			},
+			{
+				"name": "PFC_START_DATETIME",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "CONTRACT_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "MULTIPL_CPA_IND",
+				"type": "decimal",
+				"precision": 1,
+				"scale": 0
+			},
+			{
+				"name": "MULTIPL_COUNTERPARTY_IND",
+				"type": "decimal",
+				"precision": 1,
+				"scale": 0
+			},
+			{
+				"name": "CPA_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SRCE_CPA_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CP_LEGE_SYS_NO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LE_IDENTIFIER_CD",
+				"type": "varchar"
+			},
+			{
+				"name": "PAYABLE_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "PAYABLE_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "RECEIVABLE_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "RECEIVABLE_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "ACTUAL_SETTLED_LOCAL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "ACTUAL_SETTLED_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "CONTRCT_SETTLED_LOCL",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			},
+			{
+				"name": "CONTRCT_SETTLED_BASE",
+				"type": "decimal",
+				"precision": 22,
+				"scale": 6
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dwh_positions"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

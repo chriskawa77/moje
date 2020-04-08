@@ -1,0 +1,287 @@
+{
+	"name": "POSITIONS_FRWRD_LEG",
+	"properties": {
+		"activities": [
+			{
+				"name": "POS_FRWD_DATALAKE_2_DB",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"parallelCopies": 8,
+					"dataIntegrationUnits": 8,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "FRWD_POSN_LEG_SYS_NO",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "FRWD_POSN_LEG_SYS_NO",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "POSN_SYS_NO",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "POSN_SYS_NO",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "CURR_SYS_NO",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "CURR_SYS_NO",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "RFWD_POSN_LEG_TYPE_SYS_NO",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "RFWD_POSN_LEG_TYPE_SYS_NO",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "POSN_LEG_AMT_LOCAL",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "POSN_LEG_AMT_LOCAL",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "POSN_LEG_MKT_VAL_BASE",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "POSN_LEG_MKT_VAL_BASE",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "FT_INITIATED_TRAN_IND",
+									"type": "Int16"
+								},
+								"sink": {
+									"name": "FT_INITIATED_TRAN_IND",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "CNTRCT_LEG_TO_BASE_FX_RATE",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "CNTRCT_LEG_TO_BASE_FX_RATE",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "CURR_LEG_TO_BASE_FX_RATE",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "CURR_LEG_TO_BASE_FX_RATE",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "WHO_CREATED",
+									"type": "String"
+								},
+								"sink": {
+									"name": "WHO_CREATED",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WHEN_CREATED",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "WHEN_CREATED",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "WHO_UPDATED",
+									"type": "String"
+								},
+								"sink": {
+									"name": "WHO_UPDATED",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WHEN_UPDATED",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "WHEN_UPDATED",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "WHO_DELETED",
+									"type": "String"
+								},
+								"sink": {
+									"name": "WHO_DELETED",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WHEN_DELETED",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "WHEN_DELETED",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "PERCENT_TOTAL_PORTFOLIO",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "PERCENT_TOTAL_PORTFOLIO",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "CURR_CD",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CURR_CD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CURR_DESC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CURR_DESC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RFWD_POSN_LEG_TYPE_CD",
+									"type": "String"
+								},
+								"sink": {
+									"name": "RFWD_POSN_LEG_TYPE_CD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RFWD_POSN_LEG_TYPE_CD_DESC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "RFWD_POSN_LEG_TYPE_CD_DESC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UNREALIZED_GL_AMOUNT_BASE",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "UNREALIZED_GL_AMOUNT_BASE",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "POSN_LEG_CURR_BOOK_VAL_BASE",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "POSN_LEG_CURR_BOOK_VAL_BASE",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "POSN_LEG_MRKT_PRICE_LOCAL",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "POSN_LEG_MRKT_PRICE_LOCAL",
+									"type": "Decimal"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "POS_FRD_LEG_FROM_DATALAKE",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "POS_FRD_LEG_TO_DB",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
